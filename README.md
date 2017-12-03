@@ -1,41 +1,40 @@
 "# gulp-workshop-2017-q4-session-1"
 
-# 1. Ellenőrizzük van-e node telepítve
+# 1. Check our node version
 ```node -v```
 
-Ha nincs telepítsük az operációs rendszerünknek a megfelelőt:
+You can dowload from here
 
 ```https://nodejs.org/en/download/```
 
-# 2. Ellenőrizzük van-e gulp telepítve
+# 2. Check our gulp version
 ```gulp -v```
 
-Ha nincs, telepítsük a gulpot a gépünkre globálisan, álljunk a session_1/end/src mappára, hogy ide hozza létre a package-lock.json fájlt (npm-nek kell)
+If we dont use gulp globally , go to ```/end/src``` folder, and install gulp globally
 
 ```npm install gulp -g```
 
-# 3. Hozzuk létre a package.json fájlunkat, innen fogja felolvasni a függőségeket a gulpfile.js fájlunk
+# 3. Create package.json with ```npm init```, the gulpfile.js uses from here the gulp packages
 
 ```npm init``` 
 
-# 4. Telepítsük a gulp module-t
+# 4. Install gulp for gulfile.js 
 ```npm install gulp --save-dev```
 
-# 5. Hozzunk létre a györkérben .gtiignore fájlt 
-vegyül fel bele a node_modules-t, a node_moduleokat nem commitoljuk be a repoba, az minden csak localon van, a package.json-ből települnek a függőségel
+# 5. Create .gitignore in our root directory 
 
 ```/end/src/node_modules/*```
 
-# 6. Hozzuk létre a gulpfile.js fájlt, 
-Az elnevezés fontos, a gulp ezt a fájlt fogja keresni a taskok futtatásához
+# 6. Create gulpfile.js 
+Its name is important, gulp looking up for this file to execute the task
 
-# 7. Futtasuk ismét ```gulp -v``` parancsot:
+# 7. Check out gulp version again ```gulp -v```
 
-* ```CLI version 3.9.1``` → globálisan elérhetőek a gulp parancsok, így tudunk parancsokat futtatni terminálból
-* ```Local version 3.9.1``` → szerepel a package.json-ben a gulp, így npm installal bármikor újra telepíthetjük
+* ```CLI version 3.9.1``` → gulp command are useable globally, we can run command from terminal
+* ```Local version 3.9.1``` → the gulp is in our package.json, so we can reinstal it with terminal command ```npm install```
 
-# 8. Hozzuk létre a taskokat a gulpfile.jsben
-taskokat futtathatunk név szerint vagy csak a default taskot a gulp parancsot elindítva
+# 8. Create some practicing task in gulpfile.js
+we can run task by typing its names ```gulp styles``` or with the ```gulp``` command we can run the default gulp task
 ```
 var gulp = require('gulp');
 // Styles
