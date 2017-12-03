@@ -1,8 +1,8 @@
 {
-  "name": "Gulp Workshop 2017 Q4",
+  "name": "gulp-workshop-2017-q4",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "gulp-workshop-2017-q4",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
